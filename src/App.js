@@ -1,23 +1,21 @@
 import React from 'react';
 import './App.css';
 
+
+// Dependencies
+import Search from './components/Search';
+import Nav from './components/Nav';
+import Photo from './components/Photo';
+import NotFound from './components/NotFound';
+
+
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+      <Search></Search>
+      <Nav></Nav>
+      <Photo></Photo>
+      <NotFound></NotFound>
     </div>
   );
 }

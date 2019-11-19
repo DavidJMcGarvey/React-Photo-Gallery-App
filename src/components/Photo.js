@@ -2,7 +2,7 @@ import React from 'react';
 
 const Photo = () => {
   return (
-    <div class="photo-container">
+    <div className="photo-container">
       <h2>Results</h2>
       <ul>
         <li>
@@ -16,11 +16,6 @@ const Photo = () => {
         </li>
         <li>
           <img src="https://farm5.staticflickr.com/4425/36337012384_ba3365621e.jpg" alt="" />
-        </li>
-        <!-- Not Found -->
-        <li class="not-found">
-          <h3>No Results Found</h3>
-          <p>You search did not return any results. Please try again.</p>
         </li>
       </ul>
     </div>
