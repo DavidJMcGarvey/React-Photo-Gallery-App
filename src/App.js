@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 
 
 // Dependencies
@@ -8,16 +9,33 @@ import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
 import NotFound from './components/NotFound';
 
+import apiKey from './config';
 
-const App = () => {
-  return (
-    <div className="Container">
-      <Search></Search>
-      <Nav></Nav>
-      <PhotoContainer></PhotoContainer>
-      <NotFound></NotFound>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      photos: [],
+      loading: true
+    }
+  }
+
+  searchPhotos() {
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=${apiKey}&per_page=10`)
+      .then(res => console.log(res));
+  }
+
+  render() {
+    return (
+      <div className="Container">
+        <Search onSearch={this.searchPhotos}></Search>
+        <Nav></Nav>
+        <PhotoContainer render></PhotoContainer>
+        <NotFound></NotFound>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
