@@ -5,7 +5,7 @@ import './App.css';
 // Dependencies
 import Search from './components/Search';
 import Nav from './components/Nav';
-import Photo from './components/Photo';
+import PhotoContainer from './components/PhotoContainer';
 import NotFound from './components/NotFound';
 
 
@@ -14,7 +14,7 @@ const App = () => {
     <div className="Container">
       <Search></Search>
       <Nav></Nav>
-      <Photo></Photo>
+      <PhotoContainer></PhotoContainer>
       <NotFound></NotFound>
     </div>
   );
