@@ -5,12 +5,11 @@ import NotFound from './NotFound';
 const PhotoContainer = (props) => {
 
   const photos = props.data;
-  let title;
+  let title = props.title;
   let photoList;
 
   if (photos.length > 0) {
-    { title = props.title;
-      photoList = photos.map( photo =>
+    photoList = photos.map( photo =>
       <li key={photo.id.toString()}>
         <Photo 
           id={photo.id}
@@ -19,10 +18,10 @@ const PhotoContainer = (props) => {
           farm_id={photo.farm}
         />
       </li>
-    )}
+    )
   } else {
-    { title = 'Sorry dawg'
-      photoList = <NotFound />}
+    title = 'Sorry dawg'
+    photoList = <NotFound />
   }
 
   return (
