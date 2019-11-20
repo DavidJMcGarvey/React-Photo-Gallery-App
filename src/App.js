@@ -1,3 +1,4 @@
+// Imports 
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
@@ -11,13 +12,13 @@ import {
 import Search from './components/Search';
 import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
-// import NotFound from './components/NotFound';
 
 import apiKey from './config';
 
 class App extends Component {
   constructor() {
     super();
+    this.searchPhotos = this.searchPhotos.bind(this);
     this.state = {
       photos: [],
       loading: true,
@@ -47,17 +48,15 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="Container">
-          <Route path={`/`} render={ () => <Search onSearch={this.searchPhotos} /> }/>
-
-          <Route path="/" component={Nav}/>
+          {/* <Search onSearch={this.searchPhotos} /> */}
+          <Route path="/" render={ () => <Search onSearch={this.searchPhotos} /> }/>
+          <Route path="/" render={ () => <Nav query={this.state.query} /> }/>
 
           {
             (this.state.loading)
             ? <p>Loading...</p> 
-            : <PhotoContainer data={this.state.photos} title={this.state.query}/>
+            : <Route path="/" render={ () => <PhotoContainer data={this.state.photos} title={this.state.query}/> }/>
           }
-          
-          {/* <NotFound /> */}
           
         </div>
       </BrowserRouter>

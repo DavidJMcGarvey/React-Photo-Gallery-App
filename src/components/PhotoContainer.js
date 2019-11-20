@@ -2,6 +2,7 @@ import React from 'react'
 import Photo from './Photo';
 import NotFound from './NotFound';
 
+// Photos Component
 const PhotoContainer = (props) => {
 
   const photos = props.data;
@@ -10,14 +11,13 @@ const PhotoContainer = (props) => {
 
   if (photos.length > 0) {
     photoList = photos.map( photo =>
-      <li key={photo.id.toString()}>
-        <Photo 
-          id={photo.id}
-          server={photo.server}
-          secret={photo.secret}
-          farm_id={photo.farm}
-        />
-      </li>
+      <Photo 
+        id={photo.id}
+        key={photo.id.toString() + 1}
+        server={photo.server}
+        secret={photo.secret}
+        farm_id={photo.farm}
+      />
     )
   } else {
     title = 'Sorry dawg'
@@ -34,4 +34,4 @@ const PhotoContainer = (props) => {
   )
 }
 
-export default PhotoContainer
+export default PhotoContainer;

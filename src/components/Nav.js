@@ -1,15 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Nav = () => {
+// Nav component
+const Nav = (props) => {
+  
+  let query = props.query;
+  console.log(query);
+
   return (
     <nav className="main-nav">
-        <ul>
-          <li><Link to="/">Asteroids</Link></li>
-          <li><Link to="/">Boats</Link></li>
-          <li><Link to="/">Cameras</Link></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><NavLink to={{
+            pathname: "/",
+            state: { query: 'rainbows' },
+            search: `search=rainbows`
+          }}>Rainbows</NavLink></li>
+        <li><NavLink 
+          to={{
+            pathname: "/",
+            state: { query: 'asteroids' },
+            search: `search=asteroids`
+          }}>Asteroids</NavLink></li>
+        <li><NavLink 
+          to={{
+            pathname: "/",
+            state: { query: 'boats' },
+            search: `search=boats`
+          }}>Boats</NavLink></li>
+        <li><NavLink 
+          to={{
+            pathname: "/",
+            state: { query: 'cameras' },
+            search: `search=cameras`
+          }}>Cameras</NavLink></li>
+      </ul>
+    </nav>
   )
 }
 

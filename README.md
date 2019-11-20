@@ -1,3 +1,39 @@
+Full Stack JavaScript Techdegree Project 7
+--------------------------------------------
+####      React Photo Gallery App      ####
+--------------------------------------------
+
+Welcome to my React Photo Gallery App, where you come for the components, but you stay for props and state. This app uses the React UI library to present pictures from flickr.
+
+To run: 
+1. Download dependencies using **npm install** in your Terminal/CLI.
+2. Get API Key (non-comercial) from flikr: https://www.flickr.com/services/apps/create/apply/
+3. Create a **config.js** file in main directory and in it copy the following, except with your API Key as a string:
+      `
+      const apiKey = '12345example67890';
+
+      export default apiKey
+      `
+4. Back in your Terminal/CLI, type: **npm start**
+
+Or simply:
+1. Go to: www.something.com
+
+
+**BASIC FEATURES**
+Using React components and the Flickr API, this web app allows users to search 
+
+  **EXTRA FEATURES**
+-  
+
+Author: David J McGarvey
+Created: 2019-11-19
+Updated: 2019-11-20
+
+
+--------------------------------------------
+###      create-react-app README      ###
+--------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
