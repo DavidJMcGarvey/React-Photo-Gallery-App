@@ -7,11 +7,11 @@ import {
 } from 'react-router-dom';
 
 
-// Dependencies
+// App Components
 import Search from './components/Search';
 import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
-import NotFound from './components/NotFound';
+// import NotFound from './components/NotFound';
 
 import apiKey from './config';
 
@@ -20,7 +20,8 @@ class App extends Component {
     super();
     this.state = {
       photos: [],
-      loading: true
+      loading: true,
+      query: ''
     }
   }
 
@@ -28,12 +29,13 @@ class App extends Component {
     this.searchPhotos();
   }
 
-  searchPhotos = (query = 'rainbows')  => {
+  searchPhotos = (query = ['rainbows'])  => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=${query}&api_key=${apiKey}&per_page=24&format=json&nojsoncallback=1`)
       .then(res => {
         this.setState({
           photos: res.data.photos.photo,
-          loading: false
+          loading: false,
+          query: query
         })
       })
       .catch(err => {
@@ -45,17 +47,17 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="Container">
-          <Route path="/" render={ () => <Search onSearch={this.searchPhotos} /> }/>
+          <Route path={`/`} render={ () => <Search onSearch={this.searchPhotos} /> }/>
 
-          <Nav />
+          <Route path="/" component={Nav}/>
 
           {
             (this.state.loading)
             ? <p>Loading...</p> 
-            : <PhotoContainer data={this.state.photos}/>
+            : <PhotoContainer data={this.state.photos} title={this.state.query}/>
           }
           
-          <NotFound />
+          {/* <NotFound /> */}
           
         </div>
       </BrowserRouter>
