@@ -13,7 +13,7 @@ import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
 import NotFound from './components/NotFound';
 
-import { apiKey, user_id } from './config';
+import apiKey from './config';
 
 class App extends Component {
   constructor() {
@@ -25,11 +25,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.searchPhotos();
+    this.searchPhotos('cats');
   }
 
-  searchPhotos() {
-    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&text=cats&api_key=${apiKey}&user_id=${user_id}&per_page=24&format=json&nojsoncallback=1`)
+  searchPhotos(query) {
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=${query}&api_key=${apiKey}&per_page=24&format=json&nojsoncallback=1`)
       .then(res => {
         this.setState({
           photos: res.data.photos.photo,
