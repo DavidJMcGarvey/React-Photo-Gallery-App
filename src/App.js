@@ -25,10 +25,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.searchPhotos('cats');
+    this.searchPhotos();
   }
 
-  searchPhotos(query) {
+  searchPhotos = (query = 'rainbows')  => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=${query}&api_key=${apiKey}&per_page=24&format=json&nojsoncallback=1`)
       .then(res => {
         this.setState({
@@ -45,17 +45,18 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="Container">
-          <Route path="/" render={ () => <Search onSearch={this.searchPhotos(this.value)}></Search> }/>
+          <Route path="/" render={ () => <Search onSearch={this.searchPhotos} /> }/>
 
           <Nav />
 
           {
             (this.state.loading)
-            ? <p>Loading...</p>
+            ? <p>Loading...</p> 
             : <PhotoContainer data={this.state.photos}/>
           }
           
           <NotFound />
+          
         </div>
       </BrowserRouter>
     );
