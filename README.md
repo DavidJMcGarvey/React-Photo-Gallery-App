@@ -9,15 +9,14 @@ To run:
 1. Download dependencies using **npm install** in your Terminal/CLI.
 2. Get API Key (non-comercial) from flikr: https://www.flickr.com/services/apps/create/apply/
 3. Create a **config.js** file in main directory and in it copy the following, except with your API Key as a string:
-      `
+      ```
       const apiKey = '12345example67890';
-
       export default apiKey
-      `
+      ```
 4. Back in your Terminal/CLI, type: **npm start**
 
 Or simply:
-1. Go to: www.something.com
+1. {INCOMPLETE FEATURE} Go to: www.something.com
 
 
 **BASIC FEATURES**
