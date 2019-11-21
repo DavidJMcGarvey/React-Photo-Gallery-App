@@ -1,38 +1,33 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Search from './Search';
 
 // Nav component
 const Nav = (props) => {
-  
-  let query = props.query;
-  console.log(query);
 
   return (
     <nav className="main-nav">
       <ul>
-        <li><NavLink to={{
+        <li><Link onClick={()=><Search onSearch={props.search('rainbows')} />} 
+          to={{
             pathname: "/",
-            state: { query: 'rainbows' },
             search: `search=rainbows`
-          }}>Rainbows</NavLink></li>
-        <li><NavLink 
+          }}>Rainbows</Link></li>
+        <li><Link onClick={()=><Search onSearch={props.search('asteroids')} />}
           to={{
             pathname: "/",
-            state: { query: 'asteroids' },
             search: `search=asteroids`
-          }}>Asteroids</NavLink></li>
-        <li><NavLink 
+          }}>Asteroids</Link></li>
+        <li><Link onClick={()=><Search onSearch={props.search('boats')} />}
           to={{
             pathname: "/",
-            state: { query: 'boats' },
             search: `search=boats`
-          }}>Boats</NavLink></li>
-        <li><NavLink 
+          }}>Boats</Link></li>
+        <li><Link onClick={()=><Search onSearch={props.search('cameras')} />}
           to={{
             pathname: "/",
-            state: { query: 'cameras' },
             search: `search=cameras`
-          }}>Cameras</NavLink></li>
+          }}>Cameras</Link></li>
       </ul>
     </nav>
   )

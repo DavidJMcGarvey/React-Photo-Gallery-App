@@ -123,3 +123,19 @@ input {
     width: 100px;
   }
 }
+
+/* ================================= 
+  Davey CSS
+==================================== */
+
+html {
+  background: lightcyan;
+}
+
+.main-header {
+  color: darkblue;
+}
+
+.results-title {
+  text-decoration: underline;
+}

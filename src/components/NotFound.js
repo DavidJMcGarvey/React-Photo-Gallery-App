@@ -1,5 +1,6 @@
 import React from 'react';
 
+// No Search Results component
 const NotFound = () => {
   return (
     <li className="not-found">
@@ -9,4 +10,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default NotFound;
