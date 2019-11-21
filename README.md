@@ -21,14 +21,16 @@ Or simply:
 
 
 **BASIC FEATURES**
-Using React components and the Flickr API, this web app allows users to search 
+Using React components and the Flickr API, this web app allows users to search all of Flickr for whatever they would like. Upon search, 24 photos from the web will be displayed for the user's enjoyment. There are also 4 buttons that will search what is written on the button. Search results are reflected in the URL. 
 
   **EXTRA FEATURES**
--  
+- A "Loading..." indicator is present during the data fectching. 
+- If the user's search fails to retreive any photos, a message will appear encouraging them to try again.
+- {INCOMPLETE FEATURE} 404-like error route that lets user know that their url ain't cutting it.  
 
 Author: David J McGarvey
 Created: 2019-11-19
-Updated: 2019-11-20
+Updated: 2019-11-21
 
 
 --------------------------------------------
