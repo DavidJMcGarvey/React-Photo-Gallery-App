@@ -49,11 +49,10 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
         <div className="Container">
             <Header />
-            {/* <Switch> */}
-              <Route path="/" render={ (props) => <Search {...props} onSearch={this.searchPhotos} wrongRoute={this.onWrongRoute}/> }/>
+
+              <Route path="/" render={ (props) => <Search {...props} onSearch={this.searchPhotos} /> }/>
               <Route path="/" render={ () => <Nav search={this.searchPhotos}/> }/>
 
               {
@@ -61,10 +60,9 @@ class App extends Component {
                 ? <p>Loading...</p> 
                 : <Route path="/" render={ () => <PhotoContainer data={this.state.photos} title={this.state.query}/> }/>
               }
-              {/* <Route component={PageNotFound404}> */}
-            {/* </Switch> */}
+              <Route component={PageNotFound404} />
+
         </div>
-      </BrowserRouter>
     );
   }
   

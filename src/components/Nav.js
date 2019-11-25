@@ -10,23 +10,23 @@ const Nav = (props) => {
       <ul>
         <li><Link onClick={()=><Search onSearch={props.search('rainbows')} />} 
           to={{
-            pathname: "/",
-            search: `search=rainbows`
+            pathname: "/search/rainbows",
+            // search: `search=rainbows`
           }}>Rainbows</Link></li>
-        <li><Link onClick={()=><Search onSearch={props.search('asteroids')} />}
+        <li><Link onClick={()=><Search onSearch={props.search('space')} />}
           to={{
-            pathname: "/",
-            search: `search=asteroids`
-          }}>Asteroids</Link></li>
+            pathname: "/search/space",
+            // search: `search=planets`
+          }}>Space</Link></li>
         <li><Link onClick={()=><Search onSearch={props.search('boats')} />}
           to={{
-            pathname: "/",
-            search: `search=boats`
+            pathname: "/search/boats",
+            // search: `search=boats`
           }}>Boats</Link></li>
         <li><Link onClick={()=><Search onSearch={props.search('cameras')} />}
           to={{
-            pathname: "/",
-            search: `search=cameras`
+            pathname: "/search/cameras",
+            // search: `search=cameras`
           }}>Cameras</Link></li>
       </ul>
     </nav>
