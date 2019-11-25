@@ -8,13 +8,14 @@ import {
   Switch
 } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import PageNotFound404 from './components/PageNotFound404';
 
 ReactDOM.render(
   <Router>
     <Switch>
       <Route exact path="/" component={App}/>
       <Route path="/search/:results" component={App}/>
-      <Route component={App}/>
+      <Route component={PageNotFound404}/>
     </Switch>
   </Router>, 
   document.getElementById('root')

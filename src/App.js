@@ -33,7 +33,8 @@ class App extends Component {
     this.searchPhotos();
   }
 
-  searchPhotos = (query = 'rainbows')  => {
+  searchPhotos = (query)  => {
+    this.setState({ loading: true })
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=${query}&api_key=${apiKey}&per_page=24&format=json&nojsoncallback=1`)
       .then(res => {
         this.setState({
@@ -50,17 +51,19 @@ class App extends Component {
   render() {
     return (
         <div className="Container">
-            <Header />
-
-              <Route path="/" render={ (props) => <Search {...props} onSearch={this.searchPhotos} /> }/>
-              <Route path="/" render={ () => <Nav search={this.searchPhotos}/> }/>
-
-              {
-                (this.state.loading)
-                ? <p>Loading...</p> 
-                : <Route path="/" render={ () => <PhotoContainer data={this.state.photos} title={this.state.query}/> }/>
-              }
-              <Route component={PageNotFound404} />
+          <Header />
+          
+            <Route path="/search/:results" render={ (props) => <Search {...props} onSearch={this.searchPhotos} /> }/>
+            {/* <Search onSearch={this.searchPhotos} /> */}
+            {/* <Route path="/" render={ () => <Nav search={this.searchPhotos}/> }/> */}
+            <Nav search={this.searchPhotos}/>
+            {
+              (this.state.loading)
+              ? <p>Loading...</p> 
+              : <PhotoContainer data={this.state.photos} title={this.state.query}/>
+            }
+            <Route component={PageNotFound404} />
+            {/* <Route path="/" render={ () => <PhotoContainer data={this.state.photos} title={this.state.query}/> }/> */}
 
         </div>
     );
