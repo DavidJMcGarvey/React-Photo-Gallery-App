@@ -10,6 +10,7 @@ import {
 import * as serviceWorker from './serviceWorker';
 import PageNotFound404 from './components/PageNotFound404';
 
+// Router handling
 ReactDOM.render(
   <Router>
     <Switch>

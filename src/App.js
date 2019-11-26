@@ -2,11 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-} from 'react-router-dom';
+
 
 
 // App Components
@@ -14,7 +10,6 @@ import Header from './components/Header';
 import Search from './components/Search';
 import Nav from './components/Nav';
 import PhotoContainer from './components/PhotoContainer';
-import PageNotFound404 from './components/PageNotFound404';
 
 import apiKey from './config';
 
@@ -30,7 +25,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.searchPhotos();
+    this.searchPhotos(this.state.query || "rainbows");
   }
 
   searchPhotos = (query)  => {
@@ -52,19 +47,13 @@ class App extends Component {
     return (
         <div className="Container">
           <Header />
-          
-            <Route path="/search/:results" render={ (props) => <Search {...props} onSearch={this.searchPhotos} /> }/>
-            {/* <Search onSearch={this.searchPhotos} /> */}
-            {/* <Route path="/" render={ () => <Nav search={this.searchPhotos}/> }/> */}
+            <Search onSearch={this.searchPhotos} />
             <Nav search={this.searchPhotos}/>
             {
               (this.state.loading)
               ? <p>Loading...</p> 
               : <PhotoContainer data={this.state.photos} title={this.state.query}/>
             }
-            <Route component={PageNotFound404} />
-            {/* <Route path="/" render={ () => <PhotoContainer data={this.state.photos} title={this.state.query}/> }/> */}
-
         </div>
     );
   }
