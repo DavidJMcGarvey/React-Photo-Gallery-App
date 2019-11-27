@@ -15,9 +15,6 @@ To run:
       ```
 4. Back in your Terminal/CLI, type: **npm start**
 
-Or simply:
-1. {INCOMPLETE FEATURE} Go to: www.something.com
-
 
 **BASIC FEATURES**
 Using React components and the Flickr API, this web app allows users to search all of Flickr for whatever they would like. Upon search, 24 photos from the web will be displayed for the user's enjoyment. There are also 4 buttons that will search what is written on the button. Search results are reflected in the URL. 
@@ -29,7 +26,7 @@ Using React components and the Flickr API, this web app allows users to search a
 
 Author: David J McGarvey
 Created: 2019-11-19
-Updated: 2019-11-21
+Updated: 2019-11-27
 
 
 --------------------------------------------
