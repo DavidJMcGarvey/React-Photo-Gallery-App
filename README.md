@@ -25,7 +25,7 @@ Using React components and the Flickr API, this web app allows users to search a
   **EXTRA FEATURES**
 - A "Loading..." indicator is present during the data fectching. 
 - If the user's search fails to retreive any photos, a message will appear encouraging them to try again.
-- {INCOMPLETE FEATURE} 404-like error route that lets user know that their url ain't cutting it.  
+- 404-like error route that lets user know that their url ain't cutting it.  
 
 Author: David J McGarvey
 Created: 2019-11-19
