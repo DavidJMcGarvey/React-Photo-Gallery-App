@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/FSJS-techdegree-project-07/static/css/main.f09a83c4.chunk.css",
+    "main.js": "/FSJS-techdegree-project-07/static/js/main.d0042357.chunk.js",
+    "main.js.map": "/FSJS-techdegree-project-07/static/js/main.d0042357.chunk.js.map",
+    "runtime-main.js": "/FSJS-techdegree-project-07/static/js/runtime-main.f82da223.js",
+    "runtime-main.js.map": "/FSJS-techdegree-project-07/static/js/runtime-main.f82da223.js.map",
+    "static/js/2.f128c55d.chunk.js": "/FSJS-techdegree-project-07/static/js/2.f128c55d.chunk.js",
+    "static/js/2.f128c55d.chunk.js.map": "/FSJS-techdegree-project-07/static/js/2.f128c55d.chunk.js.map",
+    "index.html": "/FSJS-techdegree-project-07/index.html",
+    "precache-manifest.5c69645634bfcd566d8cabbc12037e39.js": "/FSJS-techdegree-project-07/precache-manifest.5c69645634bfcd566d8cabbc12037e39.js",
+    "service-worker.js": "/FSJS-techdegree-project-07/service-worker.js",
+    "static/css/main.f09a83c4.chunk.css.map": "/FSJS-techdegree-project-07/static/css/main.f09a83c4.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f82da223.js",
+    "static/js/2.f128c55d.chunk.js",
+    "static/css/main.f09a83c4.chunk.css",
+    "static/js/main.d0042357.chunk.js"
+  ]
+}
