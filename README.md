@@ -15,6 +15,9 @@ To run:
       ```
 4. Back in your Terminal/CLI, type: **npm start**
 
+Or:
+1. Go to: https://react-gallery-app.davidjmcgarveygithub.now.sh/
+
 
 **BASIC FEATURES**
 Using React components and the Flickr API, this web app allows users to search all of Flickr for whatever they would like. Upon search, 24 photos from the web will be displayed for the user's enjoyment. There are also 4 buttons that will search what is written on the button. Search results are reflected in the URL. 
