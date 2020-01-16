@@ -1,9 +1,10 @@
-Full Stack JavaScript Techdegree Project 7
 --------------------------------------------
 ####      React Photo Gallery App      ####
 --------------------------------------------
 
 Welcome to my React Photo Gallery App, where you come for the components, but you stay for props and state. This app uses the React UI library to present pictures from flickr.
+
+*Application Description and Goals:* 
 
 To run: 
 1. Download dependencies using **npm install** in your Terminal/CLI.
@@ -27,6 +28,17 @@ Using React components and the Flickr API, this web app allows users to search a
 - If the user's search fails to retreive any photos, a message will appear encouraging them to try again.
 - 404-like error route that lets user know that their url ain't cutting it.  
 
-Author: David J McGarvey
-Created: 2019-11-19
-Updated: 2020-01-07
+*Technologies:*
+
+1. JavaScript
+2. React
+3. Axios
+
+*Screenshots:*
+![img](https://user-images.githubusercontent.com/42125523/72557006-b8f9ac00-3854-11ea-8b18-5e3b8af292a4.png)
+![img](https://user-images.githubusercontent.com/42125523/72557008-b8f9ac00-3854-11ea-87e9-a9fcb36f35a3.png)
+![img](https://user-images.githubusercontent.com/42125523/72557010-b8f9ac00-3854-11ea-88fb-440a02385747.png)
+
+Author: David J McGarvey  
+Created: 2019-11-19  
+Updated: 2020-01-16  
